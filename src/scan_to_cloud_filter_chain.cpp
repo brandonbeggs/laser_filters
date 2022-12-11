@@ -96,7 +96,8 @@ public:
   {
     nh_->get_parameter_or("high_fidelity", high_fidelity_, false);
     nh_->get_parameter_or("notifier_tolerance", tf_tolerance_, 0.03);
-    nh_->get_parameter_or("target_frame", target_frame_, std::string("base_link"));
+    // nh_->get_parameter_or("target_frame", target_frame_, std::string("base_link"));
+    nh_->get_parameter_or("target_frame", target_frame_, std::string("odom"));
 
     nh_->get_parameter_or("filter_window", window_, 2);
     nh_->get_parameter_or("laser_max_range", laser_max_range_, DBL_MAX);
